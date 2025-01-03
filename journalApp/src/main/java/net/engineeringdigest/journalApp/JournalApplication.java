@@ -23,7 +23,6 @@ public class JournalApplication {
         ConfigurableApplicationContext context = SpringApplication.run(JournalApplication.class, args);
         ConfigurableEnvironment environment = context.getEnvironment();
         log.info(environment.getActiveProfiles()[0]);
-
     }
 
     @Bean
