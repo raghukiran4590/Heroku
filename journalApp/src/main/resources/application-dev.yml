@@ -1,0 +1,36 @@
+spring:
+  kafka:
+    bootstrap-servers: 192.168.254.181:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+#      group-id: gadegts-group
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: net.engineeringdigest.journalApp.model
+  redis:
+    host: redis-19421.c8.us-east-1-2.ec2.redns.redis-cloud.com
+    port: 19421
+    password: 8fZLd6oujo46TV5f59VIdN771OFcdEMr
+#    uri: redis-19421.c8.us-east-1-2.ec2.redns.redis-cloud.com:19421
+#    host: localhost
+#    port: 6379
+  data:
+    mongodb:
+      uri: mongodb+srv://raghukiran4590:6li4e3mv4Ch4zv3r@cluster0.gehwm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+  main:
+    allow-circular-references: true
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /journal

@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://raghukiran4590:6li4e3mv4Ch4zv3r@cluster0.gehwm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+  main:
+    allow-circular-references: true
+
+
+server:
+  port: 8082
+  servlet:
+    context-path: /journal

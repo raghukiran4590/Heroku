@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: raghukiranus@gmail.com
+    password: ypcb azuk rhcx nqmi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+
+logging:
+  level:
+    net:
+      engineeringdigest:
+        journalApp: TRACE
+#        journalApp:
+#          service:
+#                      UserService: OFF
+
+
+weather:
+  api:
+    key: 00cea7723665b359ac2dfebbe852170b
+
+
