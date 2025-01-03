@@ -1,4 +1,15 @@
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: raghukiranus@gmail.com
+    password: ypcb azuk rhcx nqmi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   kafka:
     bootstrap-servers: 192.168.254.181:9092
     producer:
@@ -34,3 +45,18 @@ server:
   port: 8080
   servlet:
     context-path: /journal
+
+logging:
+  level:
+    net:
+      engineeringdigest:
+        journalApp: TRACE
+#        journalApp:
+#          service:
+#                      UserService: OFF
+
+
+weather:
+  api:
+    key: 00cea7723665b359ac2dfebbe852170b
+
