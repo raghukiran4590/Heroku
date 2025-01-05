@@ -1,5 +1,6 @@
 package net.engineeringdigest.journalApp.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import net.engineeringdigest.journalApp.api.response.WeatherResponse;
 import net.engineeringdigest.journalApp.entity.User;
 import net.engineeringdigest.journalApp.repository.UserEntryRepository;
@@ -16,6 +17,7 @@ import java.util.List;
 
     @RestController
     @RequestMapping("/user")
+    @Tag(name = "User APIs", description = "Read, Update & Delete User")
     public class UserController {
 
         @Autowired
@@ -57,18 +59,16 @@ import java.util.List;
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-/*
         @PostMapping("/postAll")
         public ResponseEntity<?> createUsers(@RequestBody List<User> users) {
             try {
                 for (User u : users) {
-                    userService.saveEntry(u);
+                    userService.saveUser(u);
                 }
                 return new ResponseEntity<>(users, HttpStatus.CREATED);
             } catch (Exception e) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
         }
-*/
     }
 
